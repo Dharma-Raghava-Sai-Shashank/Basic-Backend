@@ -1,12 +1,10 @@
-const Mongoose = require('mongoose')
+const Mongoose = require("mongoose")
 
-Mongoose.connect('mongodb+srv://saishashank:Arjun@9920@cluster0.lemlj6u.mongodb.net/Collegeverse?retryWrites=true&w=majority',{
+Mongoose.connect('mongodb+srv://shashank:Arjun@cluster0.3pp09ti.mongodb.net/Collegeverse?retryWrites=true&w=majority',{
     useNewUrlParser:true,
-    useCreateIndex:true,
     useUnifiedTopology:true,
-    useFindAndModify:false
 }).then(()=>{
         console.log("Connected to mongodb database")
-    }).catch((err)=> console.log("Connection Unsucccessful"))
+    }).catch((err)=> console.log(err))
 
 module.exports = Mongoose
