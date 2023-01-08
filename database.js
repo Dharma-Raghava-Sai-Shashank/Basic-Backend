@@ -1,8 +1,12 @@
-const Sequelize = require('sequelize')
+const Mongoose = require('mongoose')
 
-const sequelize = new Sequelize("Collegeverse","root","Arjun@9920",{
-    dialect : "mysql",
-    host : "localhost"
-})
+Mongoose.connect('mongodb+srv://saishashank:Arjun@9920@cluster0.lemlj6u.mongodb.net/Collegeverse?retryWrites=true&w=majority',{
+    useNewUrlParser:true,
+    useCreateIndex:true,
+    useUnifiedTopology:true,
+    useFindAndModify:false
+}).then(()=>{
+        console.log("Connected to mongodb database")
+    }).catch((err)=> console.log("Connection Unsucccessful"))
 
-module.exports = sequelize
+module.exports = Mongoose
